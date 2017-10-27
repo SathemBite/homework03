@@ -27,6 +27,7 @@ public class FileAnalyzer {
                 replaceAll("(</?.*?>)|([^А-Яа-я0-9,.!:\\?\\s])", "");
         Matcher matcher = tempPat.matcher(text);
         int lastImgNum = 0;
+
         while (matcher.find()){
             sentencesWithImg.append(matcher.group(0));
             int curImgNum = Integer.parseInt(matcher.group(1));
